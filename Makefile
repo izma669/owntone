@@ -8,11 +8,11 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=owntone
-PKG_VERSION:=28.11
-PKG_RELEASE:=2
+PKG_VERSION:=28.12
+PKG_RELEASE:=1
 
 # Git snapshot
-PKG_REV:=04789e995c3ca7d67a7cd7e01fe64ccb6c465d32
+PKG_REV:=387660d96ba826230c71ee6985145cc431cb2599
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_PROTO:=git
@@ -27,7 +27,6 @@ PKG_SOURCE_VERSION:=$(PKG_REV)
 PKG_FIXUP:=autoreconf
 PKG_BUILD_FLAGS:=no-mips16
 PKG_INSTALL:=1
-PKG_BUILD_DEPENDS:=node/host
 
 PKG_MAINTAINER:=Espen Jürgensen <espenjurgensen+openwrt@gmail.com>
 PKG_LICENSE:=GPL-2.0
@@ -41,7 +40,7 @@ SECTION:=sound
 CATEGORY:=Sound
 TITLE:=iTunes (DAAP) server for Apple Remote and AirPlay
 URL:=https://github.com/owntone/owntone-server
-DEPENDS:=+libevent2-pthreads +libgpg-error +libgcrypt +libgdbm +zlib +libexpat +libunistring \
+DEPENDS:=+libgpg-error +libgcrypt +libgdbm +zlib +libexpat +libunistring \
 	+libevent2 +libdaemon +confuse +alsa-lib +libffmpeg-full \
 	+libxml2 +libavahi-client +sqlite3-cli +libplist +libcurl +libjson-c \
 	+libprotobuf-c +libgnutls +libsodium +libwebsockets +libuuid $(ICONV_DEPENDS)
